@@ -1,0 +1,66 @@
+#!/bin/bash
+################################################################################
+# Name:        .nanorc
+# Date:        2024-03-22
+# Author:      Amosnimos
+# Description: Configures nano text editor settings for improved usability and functionality.
+################################################################################
+
+#   ▙ ▌▞▀▖▙ ▌▞▀▖▛▀▖▞▀▖
+#   ▌▌▌▙▄▌▌▌▌▌ ▌▙▄▘▌  
+# ▗▖▌▝▌▌ ▌▌▝▌▌ ▌▌▚ ▌ ▖
+# ▝▘▘ ▘▘ ▘▘ ▘▝▀ ▘ ▘▝▀ 
+
+# GNU nano, version 6.0
+
+# NOTE: All directories in /usr/share/nano must be hidden.
+
+# [load rc file]
+include "/usr/share/nano/nano-highlight/*"
+
+# [key bindings]:
+unbind ^I all
+bind ^Y copy main
+bind ^N findnext main
+bind ^H beginpara main
+bind ^L endpara main
+bind ^K cut main
+bind ^P paste main
+bind ^Z undo main
+bind ^F whereis main
+bind ^R replace main
+bind ^Q exit main
+bind ^X cut main
+bind ^D zap main
+bind ^B gotoline main
+bind ^V insert main
+bind ^I tab main
+bind ^space unindent main
+bind ^U delete main
+bind M-space indent main
+bind M-K pageup main
+bind M-J pagedown main
+bind M-L nextword main
+bind M-H prevword main
+bind M-T speller main
+bind M-N findprevious main
+bind M-| tabstospaces all
+bind M-Z redo main
+bind M-s linenumbers main
+
+# [setup]:
+# Set tab size to 4 spaces
+set tabsize 4
+set tabstospaces
+set nowrap
+set nohelp
+set autoindent
+set speller "aspell -x -c"
+set multibuffer
+
+# [Removed lines]:
+# bind ^V paste main
+# bind ^X cut main
+# bind ^P paste main
+# set linenumbers
+# set mouse
